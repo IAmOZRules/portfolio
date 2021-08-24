@@ -12,16 +12,17 @@ function ExperienceAccordion(props) {
       <ThemeProvider theme={theme.name === "light" ? LightTheme : DarkTheme}>
         <Accordion>
           {props.sections.map((section) => {
+            console.log(section);
             return (
               <Panel
                 className="accord-panel"
                 title={section["title"]}
                 key={section["title"]}
               >
-                {section["experiences"].map((id, experience) => {
+                {section["experiences"].map((experience) => {
                   return (
                     <ExperienceCard
-                      key={id}
+                      key={experience["id"]}
                       experience={experience}
                       theme={theme}
                     />

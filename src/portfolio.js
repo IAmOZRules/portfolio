@@ -379,12 +379,13 @@ const experience = {
       title: "Work Experience",
       experiences: [
         {
+          id: 1,
           title: "Cyber Security (Intern)",
           company: "Verzeo",
           company_github: "https://www.verzeo.com/",
           logo_path: "verzeo.jpg",
           duration: "Jun 2020 - Aug 2020",
-          location: "WFH",
+          location: "Work From Home",
           description:
             "Attended training to build understanding of various security techniques and industry. Studied methods of preventing and mitigating various types of security related issues. Studied functional relationships between different operational areas to better understand importance and impact of different decisions and protocols. Applied acquired training skills on a term end project.",
           color: "#0071C5",
@@ -395,6 +396,7 @@ const experience = {
       title: "Extracurricular",
       experiences: [
         {
+          id: 2,
           title: "Event Organizer",
           company: "The Otaku Club",
           company_github: "https://vit.ac.in/campus/Clubs/Arts%26Cultural",
@@ -405,6 +407,7 @@ const experience = {
           color: "#4285F4",
         },
         {
+          id: 3,
           title: "Part of the Recruitment Panel",
           company: "The Otaku Club",
           company_github: "https://vit.ac.in/campus/Clubs/Arts%26Cultural",
@@ -415,6 +418,7 @@ const experience = {
           color: "#196acf",
         },
         {
+          id: 4,
           title: "GitHub Student Developer",
           company: "GitHub",
           company_github: "https://github.com/",
