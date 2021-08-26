@@ -21,12 +21,12 @@ function Header(props) {
     border: "none",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: props.theme.name === "light" ? "#D500FF" : "#2AFF00",
+    backgroundColor: props.theme.name === "light" ? "#F0A202" : "#5eeb5b",
     outline: "none",
     transition: "all 0.2s ease-in-out",
     ":hover": {
       boxShadow: `0 3px 8px ${
-        props.theme.name === "light" ? "#D500FF" : "#2AFF00"
+        props.theme.name === "light" ? "#F0A202" : "#5eeb5b"
       }`,
     },
   });
@@ -54,7 +54,6 @@ function Header(props) {
       <CgSun
         strokeWidth={1}
         size={20}
-        // color={props.theme.name === "light" ? "black" : "black"}
         color="white"
       />
     );

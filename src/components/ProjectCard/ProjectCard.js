@@ -23,9 +23,22 @@ export default function ProjectCard({ repo, theme }) {
     },
   });
 
+  const demoStyles = style({
+    backgroundColor: theme.name === "dark" ? "#2AFF00" : "#D500FF",
+    color: theme.name === "dark" ? null : "white",
+    ":hover": {
+      boxShadow: `0 0 10px ${theme.name === "dark" ? "#2AFF00" : "#D500FF"}`,
+    },
+    transition: "0.2s ease-in",
+    transform: "boxShadow",
+  });
+
   const githubStyles = style({
-    borderColor: theme.name === "dark" ? "#2AFF00" : "#D500FF",
-    marginRight: "0.5rem",
+    ":hover": {
+      boxShadow: `0 0 10px ${theme.name === "dark" ? "#2AFF00" : "#D500FF"}`,
+    },
+    transition: "0.2s ease-in",
+    transform: "boxShadow",
   });
 
   return (
@@ -51,7 +64,7 @@ export default function ProjectCard({ repo, theme }) {
             <button
               className="leenk-btn github-btn"
               {...githubStyles}
-              style={!repo.demo ? { width: "1000%" } : null}
+              style={!repo.demo ? { width: "100%" } : null}
               onClick={() => openRepoinNewTab(repo.github)}
             >
               <i className="font fab fa-github" />
@@ -60,11 +73,7 @@ export default function ProjectCard({ repo, theme }) {
             {repo.demo && (
               <button
                 className="leenk-btn demo-btn"
-                style={
-                  theme.name === "dark"
-                    ? { backgroundColor: "#2AFF00" }
-                    : { backgroundColor: "#D500FF", color: "white" }
-                }
+                {...demoStyles}
                 onClick={() => openRepoinNewTab(repo.demo)}
               >
                 <i class="font fas fa-arrow-right"></i>Demo

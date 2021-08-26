@@ -1,7 +1,9 @@
 import React from "react";
 import "./Footer.css";
+import ScrollToTop from "react-scroll-to-top";
 
-/* eslint-disable jsx-a11y/accessible-emoji */
 export default function Footer(props) {
-  return <div className="footer-div"></div>;
+  return <div className="footer-div">
+    <ScrollToTop smooth />
+  </div>;
 }

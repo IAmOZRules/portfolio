@@ -5,18 +5,17 @@ import { skills } from "../../portfolio";
 import { Fade } from "react-reveal";
 import FullStackImg from "./FullStackImg";
 import DataScienceImg from "./DataScienceImg";
-// import DesignImg from "./DesignImg";
 
 function GetSkillSvg(props) {
   if (props.fileName === "FullStackImg")
     return <FullStackImg theme={props.theme} />;
   else if (props.fileName === "DataScienceImg")
     return <DataScienceImg theme={props.theme} />;
-  // return <DesignImg theme={props.theme} />;
 }
 
 function SkillSection(props) {
   const theme = props.theme;
+
   return (
     <div>
       {skills.data.map((skill, index) => {
@@ -40,9 +39,10 @@ function SkillSection(props) {
                 </Fade>
                 <Fade right duration={2000}>
                   <div>
-                    {skill.skills.map((skillSentence) => {
+                    {skill.skills.map((skillSentence, id) => {
                       return (
                         <p
+                          key={id}
                           className="subTitle skills-text"
                           style={{ color: theme.secondaryText }}
                         >

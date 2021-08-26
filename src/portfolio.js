@@ -362,7 +362,7 @@ const certifications = {
       certificate_link:
         "https://www.udemy.com/certificate/UC-7be153b1-efe7-4bc4-b729-d28823f00823/",
       alt_name: "Flask",
-      color_code: "#FFFFFF",
+      color_code: "#BBBBBB",
     },
   ],
 };
